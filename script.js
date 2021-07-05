@@ -61,6 +61,8 @@ function enableCam(event) {
 var children = [];
 
 function predictWebcam() {
+  console.log(tf.getBackend());
+
   // Now let's start classifying a frame in the stream.
   model.detect(video).then(function (predictions) {
     // Remove any highlighting we did previous frame.
